@@ -1,6 +1,6 @@
 work_directory <- "C:/Users/User/Documents/Semester 3/DM/TB"
 setwd(work_directory)
-dataset <- read.csv("anan.csv", sep = ",")
+dataset <- read.csv("data.csv", sep = ",")
 
 library(C50)
 library(printr)

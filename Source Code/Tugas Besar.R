@@ -5,11 +5,10 @@ dataset <- read.csv("data.csv", sep = ",")
 
 #uncomment baris dibawah jika belum menginstall packages yang akan digunakan
 #install.packages("C50")
-#install.packages("printr")
 
-#memanggil packages C50 dan printr
+#memanggil packages C50
 library(C50)
-library(printr)
+
 
 #mengubah atribut pada dataset menjadi factor
 dataset$age <- as.factor(dataset$age)

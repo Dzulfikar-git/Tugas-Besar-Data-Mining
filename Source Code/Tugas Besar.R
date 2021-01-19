@@ -9,8 +9,22 @@ dataset <- read.csv("data.csv", sep = ",")
 #memanggil packages C50
 library(C50)
 
+#Mengubah atribut pada dataset menjadi numeric untuk dilakukan korelasi
+dataset$age <- as.numeric(dataset$age)
+dataset$deliverynum <- as.numeric(dataset$deliverynum)
+dataset$deliverytime <- as.numeric(dataset$deliverytime)
+dataset$bloodofpressure <- as.numeric(dataset$bloodofpressure)
+dataset$heartproblem <- as.numeric(dataset$heartproblem)
+dataset$caesarian <- as.numeric(dataset$caesarian)
 
-#mengubah atribut pada dataset menjadi factor
+#Melihat korelasi antar atribut x dengan y
+cor(dataset$age, dataset$caesarian, method = "pearson")
+cor(dataset$deliverynum, dataset$caesarian, method = "pearson")
+cor(dataset$deliverytime, dataset$caesarian, method = "pearson")
+cor(dataset$bloodofpressure, dataset$caesarian, method = "pearson")
+cor(dataset$heartproblem, dataset$caesarian, method = "pearson")
+
+#mengubah atribut pada dataset menjadi factor  
 dataset$age <- as.factor(dataset$age)
 dataset$deliverynum <- as.factor(dataset$deliverynum)
 dataset$deliverytime <- as.factor(dataset$deliverytime)
